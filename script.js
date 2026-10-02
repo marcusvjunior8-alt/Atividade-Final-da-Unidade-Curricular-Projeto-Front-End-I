@@ -37,7 +37,35 @@ const servicos = [
   }
 ];
 
-function renderizarServicos() {
+const equipe = [
+  {
+    foto: "./imgs/ana-souza.png",
+    nome: "Dra. Ana Souza",
+    funcao: "Médica Veterinária",
+    descricao: "Responsável pelos atendimentos clínicos e acompanhamento de cães e gatos."
+  },
+  {
+    foto: "./imgs/lucas-ferreira.png",
+    nome: "Dr. Lucas Ferreira",
+    funcao: "Médico Veterinário",
+    descricao: "Especialista em cirurgia veterinária e procedimentos de rotina."
+  },
+  {
+    foto: "./imgs/carla-mendes.png",
+    nome: "Carla Mendes",
+    funcao: "Veterinária",
+    descricao: "Atua em atendimento clínico, vacinação e acompanhamento de filhotes e idosos."
+  },
+  {
+    foto: "./imgs/juliana-costa.png",
+    nome: "Juliana Costa",
+    funcao: "Banho e Tosa",
+    descricao: "Responsável pelos cuidados de higiene e beleza dos pets."
+  }
+];
+
+
+function renderizarServices() {
   const container = document.querySelector('.container-services');
   if (!container) return;
 
@@ -51,5 +79,18 @@ function renderizarServicos() {
     </div>
   `).join('');
 }
+function renderizarTeam(){
+  const container = document.querySelector('.container-team')
+  if (!container) return
 
-document.addEventListener('DOMContentLoaded', renderizarServicos);
+  container.innerHTML = equipe.map(team => `
+    <div class="card-team">
+    <img src="${team.foto}" alt="${team.nome}">
+    <h3>${team.nome}</h3>
+    <span class="function">(${team.funcao})</span>
+    <p>${team.descricao}</p>
+    </div>
+    `).join('')
+}
+document.addEventListener('DOMContentLoaded', renderizarServices());
+document.addEventListener('DOMContentLoaded', renderizarTeam())

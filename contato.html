@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patas & Cuidados - Solicitar Serviço</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="pagina-formulario">
+
+
+    <div class="top">
+        <div class="logo">
+            <img src="./imgs/logo.png" alt="Patas & Cuidados Logo">
+        </div>
+        <div class="nav">
+            <a href="./index.html">Início</a>
+            <a href="./services.html">Serviços</a>
+            <a href="./team.html">Nossa Equipe</a>
+            <a href="./contato.html">Contato</a>
+        </div>
+        <div></div>
+    </div>
+
+
+    <main class="container">
+
+
+        <div class="left">
+            <div class="txt-form">
+                <h2><i class="fa-solid fa-paw"></i> Solicite um Serviço</h2>
+                <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+            </div>
+
+            <form id="meu-formulario" action="https://formsubmit.co/marcus.v.junior8@aluno.senai.br" method="POST">
+
+                <div class="form-group">
+                    <label for="nome">Nome do cliente *</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@seuemail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone *</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(79) 99999-9999" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nome_pet">Nome do animal *</label>
+                    <input type="text" id="nome_pet" name="nome_pet" placeholder="Digite o nome do seu pet" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tipo_animal">Tipo de animal *</label>
+                        <select id="tipo_animal" name="tipo_animal" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="cachorro">Cachorro</option>
+                            <option value="gato">Gato</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servico">Serviço desejado *</label>
+                        <select id="servico" name="servico" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="consulta">Consulta Veterinária</option>
+                            <option value="banho_tosa">Banho e Tosa</option>
+                            <option value="vacina">Vacinação</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem / Observação</label>
+                    <textarea id="mensagem" name="mensagem" rows="4"
+                        placeholder="Escreva aqui sua mensagem..."></textarea>
+                </div>
+
+                <button type="submit">
+                    <i class="fa-solid fa-paper-plane"></i> Enviar Solicitação
+                </button>
+
+                <span class="campos-obrigatorios">Campos com * são obrigatórios.</span>
+            </form>
+        </div>
+
+
+        <div class="right">
+            <div class="info-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-paw card-icon"></i>
+                    <h3>Estamos aqui para ajudar!</h3>
+                </div>
+
+                <p>Nossa equipe está pronta para atender você e cuidar do seu pet com todo o carinho e profissionalismo.
+                </p>
+
+                <div class="contact-details">
+                    <p><i class="fa-solid fa-phone"></i> (79) 99999-9999</p>
+                    <p><i class="fa-solid fa-envelope"></i> contato@patasecuidados.com.br</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Aracaju - SE</p>
+                </div>
+
+                <div class="card-illustration">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer class="footer-patas">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="title">Patas &amp;</span>
+                    <span class="subtitle">Cuidados</span>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <p><i class="fa-solid fa-phone"></i> (79) 99999-0099</p>
+                <p><i class="fa-solid fa-envelope"></i> contato@patasecuidados.com.br</p>
+                <p><i class="fa-solid fa-location-dot"></i> Aracaju - SE</p>
+            </div>
+
+            <div class="footer-social">
+                <span>Siga-nos</span>
+                <div class="social-icons">
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Patas &amp; Cuidados. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

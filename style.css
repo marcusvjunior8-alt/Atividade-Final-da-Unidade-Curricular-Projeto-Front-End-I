@@ -1,21 +1,28 @@
+/* ==========================================================================
+   1. RESET E ESTILOS GERAIS
+   ========================================================================== */
 * {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
+/* ==========================================================================
+   2. CABEÇALHO / NAVEGAÇÃO (.top)
+   ========================================================================== */
 .top {
     display: flex;
     background-color: #FFFFFF;
     justify-content: space-between;
     align-items: center;
     color: #2D3748;
-    min-height: 200px;
+    max-height: 120px;
     border: 1px solid gray;
 }
 
 .logo img {
-    width: 150px;
+    width: 120px;
     border-radius: 50%;
     margin-top: 20px;
     margin-left: 20px;
@@ -31,17 +38,24 @@
     margin-right: 20px;
 }
 
-.nav a:hover {
-    transform: translateY(-5px);
-    transition: 0.5s ease;
-    color:#2D3748;
-}
 
 .nav a {
     text-decoration: none;
     color: #4FA89B;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
 }
 
+.nav a:hover {
+    transform: translateY(-5px);
+    transition: 0.2s ease;
+    color: #2D3748;
+}
+
+/* ==========================================================================
+   3. BANNERS & SEÇÃO DE INFORMAÇÕES
+   ========================================================================== */
 .banner {
     position: relative;
 }
@@ -86,9 +100,10 @@
     background-color: #17655B;
     color: #FFFFFF;
 }
-.button-info button:hover{
+
+.button-info button:hover {
     color: white;
-    background-color:#2D3748;
+    background-color: #2D3748;
     transform: translateY(-5px);
     transition: 0.3s ease;
 }
@@ -148,20 +163,25 @@
 
 .txt {
     position: absolute;
-    top: 30%;
+    top: 22%;
     left: 6%;
     transform: translateY(-50%);
     color: #ffffff;
 }
 
 .txt h2 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    margin-bottom: 9px;
 }
 
-.txt span {
-    font-size: 1.5rem;
+.txt span,
+.txt_team p {
+    font-size: 1.4rem;
 }
 
+/* ==========================================================================
+   4. SEÇÕES DE SERVIÇOS E EQUIPE
+   ========================================================================== */
 .secao-services {
     position: relative;
     max-width: 1000px;
@@ -177,8 +197,23 @@
     gap: 25px;
 }
 
-.card-servico {
-    border: 1px solid rgb(131, 130, 130);
+.secao-team {
+    min-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.container-team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card-servico,
+.card-team {
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     padding: 15px;
     width: 220px;
@@ -187,6 +222,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.card-servico:hover,
+.card-team:hover {
+    border: 2px solid #4FA89B;
+    transition: 0.3s ease;
+    transform: translateY(-5px);
 }
 
 .card-servico img {
@@ -209,17 +251,237 @@
     margin: 12px 0 6px;
 }
 
-.card-servico p {
+.card-servico p,
+.card-team p {
     font-size: 1.1rem;
     margin: 0;
 }
-.card-servico span{
+
+.card-servico span {
     font-weight: bold;
     font-size: 16px;
     margin: 3px;
 }
 
+.card-team h3 {
+    margin-bottom: 2px;
+}
 
+.card-team span {
+    margin-bottom: 5px;
+}
+
+.card-team img {
+    border-radius: 20px;
+    width: 180px;
+    height: 55%;
+    margin: 12px;
+}
+
+.function {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.txt_team {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 84vh;
+}
+
+.txt_team h2 {
+    font-size: 1.9rem;
+    margin-right: 190px;
+    margin-bottom: 4px;
+}
+
+/* ==========================================================================
+   5. PÁGINA DO FORMULÁRIO (CORES E ESPAÇAMENTO REFINADOS)
+   ========================================================================== */
+
+/* Layout principal dividindo formulário (esquerda) e card (direita) */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+/* Coluna da esquerda (Formulário) */
+.left {
+    flex: 1.4;
+}
+
+.txt-form {
+    margin-bottom: 25px;
+}
+
+.txt-form h2 {
+    color: #1e7e6e;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.txt-form p {
+    color: #666666;
+    font-size: 0.95rem;
+}
+
+/* Formulário e entradas de texto */
+#meu-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #1e7e6e;
+    font-weight: bold;
+    font-size: 0.88rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    color: #2D3748;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #1e7e6e;
+    box-shadow: 0 0 0 3px rgba(30, 126, 110, 0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Separação dos seletores em duas colunas (Tipo de Animal e Serviço) */
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Botão Enviar Solicitação */
+#meu-formulario button[type="submit"] {
+    background-color: #1e7e6e;
+    color: #FFFFFF;
+    border-radius: 8px;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    padding: 14px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#meu-formulario button[type="submit"]:hover {
+    background-color: #166155;
+}
+
+.campos-obrigatorios {
+    font-size: 0.78rem;
+    color: #718096;
+    margin-top: 2px;
+}
+
+/* Coluna da direita (Card de Informações) */
+.right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-card {
+    background-color: #e9f7f5;
+    border-radius: 16px;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 670px;
+    box-sizing: border-box;
+}
+
+.card-header .card-icon {
+    font-size: 2.2rem;
+    color: #1e7e6e;
+}
+
+.card-header h3 {
+    color: #1e7e6e;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.info-card>p {
+    color: #2D3748;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: #1e7e6e;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.card-illustration {
+    margin-top: auto;
+    text-align: center;
+    font-size: 4.5rem;
+    color: #1e7e6e;
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   6. RODAPÉ (.footer-patas)
+   ========================================================================== */
 .footer-patas {
     background-color: #115c58;
     color: #ffffff;
@@ -326,6 +588,7 @@
     opacity: 0.8;
 }
 
+/* RESPONSIVIDADE DO RODAPÉ */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
