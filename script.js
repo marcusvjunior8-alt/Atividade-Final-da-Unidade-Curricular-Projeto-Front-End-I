@@ -79,7 +79,7 @@ function renderizarServices() {
     </div>
   `).join('');
 }
-function renderizarTeam(){
+function renderizarTeam() {
   const container = document.querySelector('.container-team')
   if (!container) return
 
